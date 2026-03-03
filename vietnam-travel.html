@@ -606,143 +606,244 @@ footer{background:rgba(0,0,0,.5);border-top:1px solid rgba(201,168,76,.15);paddi
 const P = (id,w,h)=>`https://picsum.photos/id/${id}/${w}/${h}`;
 
 const DEST = {
-  halong:{
-    id:'halong', name:'Vịnh Hạ Long', region:'Quảng Ninh · Miền Bắc', regionFull:'Quảng Ninh · Miền Bắc · Việt Nam',
-    filter:'bac bien', stars:'★★★★★', badge:'UNESCO', price:'2.500.000đ', priceNum:2500000, days:'3 ngày 2 đêm',
-    teaser:'1.600+ hòn đảo đá vôi, hang động huyền bí, làng chài nổi đặc sắc',
-    heroImg:P(119,1400,800), cardImg:P(119,700,900), bookImg:P(119,600,400),
-    gallery:[
-      {src:P(119,1200,600),title:'Vịnh nhìn từ trên cao',desc:'Toàn cảnh hơn 1.600 đảo đá vôi nhìn từ flycam — kỳ quan của thiên nhiên'},
-      {src:P(188,1200,600),title:'Du thuyền trên vịnh',desc:'Trải nghiệm qua đêm trên du thuyền hạng sang, ngắm bình minh tuyệt đẹp'},
-      {src:P(29,1200,600),title:'Hang động kỳ vĩ',desc:'Hang Sửng Sốt với hàng ngàn nhũ đá triệu năm tuổi lung linh huyền ảo'},
-      {src:P(15,1200,600),title:'Chèo kayak khám phá',desc:'Luồn lách qua những đảo nhỏ, khám phá góc khuất tuyệt đẹp bằng kayak'},
-      {src:P(142,1200,600),title:'Bình minh Hạ Long',desc:'Khoảnh khắc bình minh vàng óng nhuộm mặt vịnh — ký ức không phai mờ'},
+  halong: {
+    id: 'halong',
+    name: 'Vịnh Hạ Long',
+    region: 'Quảng Ninh · Miền Bắc',
+    regionFull: 'Quảng Ninh · Miền Bắc · Việt Nam',
+    filter: 'bac bien',
+    stars: '★★★★★',
+    badge: 'UNESCO',
+    price: '2.500.000đ',
+    priceNum: 2500000,
+    days: '3 ngày 2 đêm',
+    teaser: '1.600+ hòn đảo đá vôi, hang động huyền bí, làng chài nổi đặc sắc',
+    heroImg: 'https://images.unsplash.com/photo-1560303982-0a5e3290ff9a?auto=format&fit=crop&q=80&w=1400',
+    cardImg: 'https://images.unsplash.com/photo-1560303982-0a5e3290ff9a?auto=format&fit=crop&q=80&w=700&h=900',
+    bookImg: 'https://images.unsplash.com/photo-1560303982-0a5e3290ff9a?auto=format&fit=crop&q=80&w=600',
+    gallery: [
+      {src: 'https://images.unsplash.com/photo-1560303982-0a5e3290ff9a?auto=format&fit=crop&q=80&w=1200', title: 'Vịnh nhìn từ trên cao', desc: 'Toàn cảnh hơn 1.600 đảo đá vôi'},
+      {src: 'https://images.pexels.com/photos/2583852/pexels-photo-2583852.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', title: 'Du thuyền trên vịnh', desc: 'Trải nghiệm qua đêm trên du thuyền'},
+      {src: 'https://images.unsplash.com/photo-1559827291-72ee739b9c17?auto=format&fit=crop&q=80&w=1200', title: 'Hang động kỳ vĩ', desc: 'Hang Sửng Sốt lung linh nhũ đá'},
+      {src: 'https://images.pexels.com/photos/147411/italy-mountains-dawn-daybreak-147411.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', title: 'Chèo kayak khám phá', desc: 'Luồn lách qua đảo nhỏ bằng kayak'},
+      {src: 'https://images.unsplash.com/photo-1559827291-72ee739b9c17?auto=format&fit=crop&q=80&w=1200', title: 'Bình minh Hạ Long', desc: 'Khoảnh khắc bình minh vàng óng'}
     ],
-    activities:[
+    activities: [
       {icon:'🚢',name:'Du thuyền qua đêm',desc:'Ngủ trên du thuyền hạng sang giữa lòng vịnh, thức dậy ngắm bình minh trong sương mù huyền ảo.',dur:'2 ngày 1 đêm'},
       {icon:'⛵',name:'Chèo thuyền Kayak',desc:'Luồn lách qua hang động và những hòn đảo nhỏ — khám phá góc khuất mà tàu lớn không vào được.',dur:'2–3 giờ'},
       {icon:'🕳️',name:'Tham quan hang động',desc:'Khám phá Hang Sửng Sốt, Hang Đầu Gỗ với hàng ngàn nhũ đá kỳ vĩ triệu năm tuổi.',dur:'3–4 giờ'},
       {icon:'🎣',name:'Câu mực đêm',desc:'Trải nghiệm câu mực cùng ngư dân địa phương trên thuyền gỗ truyền thống dưới bầu trời đầy sao.',dur:'2–3 giờ'},
       {icon:'🏖️',name:'Tắm biển đảo Ti Tốp',desc:'Tắm biển và leo núi 360 bậc thang để ngắm toàn cảnh vịnh tuyệt đẹp từ đỉnh đảo Ti Tốp.',dur:'Nửa ngày'},
-      {icon:'🍜',name:'Nấu ăn trên boong',desc:'Học nấu hải sản đặc sản Quảng Ninh ngay trên boong tàu cùng đầu bếp chuyên nghiệp.',dur:'1.5 giờ'},
+      {icon:'🍜',name:'Nấu ăn trên boong',desc:'Học nấu hải sản đặc sản Quảng Ninh ngay trên boong tàu cùng đầu bếp chuyên nghiệp.',dur:'1.5 giờ'}
     ],
-    aboutHtml:'<h3>Kỳ Quan Thiên Nhiên <em>Của Nhân Loại</em></h3><p>Vịnh Hạ Long trải dài hơn 120km bờ biển với hơn 1.600 hòn đảo đá vôi nhô lên từ mặt nước xanh ngọc bích. Mỗi hòn đảo mang một hình thù độc đáo — từ đảo con rùa, đảo con chó đến những cụm đảo hùng vĩ như thiên hùng sơn.</p><p>Được UNESCO công nhận là Di sản Thiên nhiên Thế giới năm 1994 và 2000. Năm 2012, Hạ Long lọt vào danh sách 7 Kỳ Quan Thiên Nhiên Mới của Thế Giới — danh hiệu xứng đáng với vẻ đẹp phi thường của vịnh.</p>',
-    facts:[{l:'Diện tích',v:'1.553 km²'},{l:'Số đảo',v:'1.969 hòn'},{l:'UNESCO',v:'1994 & 2000'},{l:'Mùa đẹp nhất',v:'Tháng 10 – 4'},{l:'Tọa độ',v:'20°55′B, 107°0′Đ'}]
+    aboutHtml: '<h3>Kỳ Quan Thiên Nhiên <em>Của Nhân Loại</em></h3><p>Vịnh Hạ Long trải dài hơn 120km bờ biển với hơn 1.600 hòn đảo đá vôi nhô lên từ mặt nước xanh ngọc bích. Mỗi hòn đảo mang một hình thù độc đáo — từ đảo con rùa, đảo con chó đến những cụm đảo hùng vĩ như thiên hùng sơn.</p><p>Được UNESCO công nhận là Di sản Thiên nhiên Thế giới năm 1994 và 2000. Năm 2012, Hạ Long lọt vào danh sách 7 Kỳ Quan Thiên Nhiên Mới của Thế Giới — danh hiệu xứng đáng với vẻ đẹp phi thường của vịnh.</p>',
+    facts: [
+      {l:'Diện tích',v:'1.553 km²'},
+      {l:'Số đảo',v:'1.969 hòn'},
+      {l:'UNESCO',v:'1994 & 2000'},
+      {l:'Mùa đẹp nhất',v:'Tháng 10 – 4'},
+      {l:'Tọa độ',v:'20°55′B, 107°0′Đ'}
+    ]
   },
-  hoian:{
-    id:'hoian', name:'Phố Cổ Hội An', region:'Quảng Nam · Miền Trung', regionFull:'Quảng Nam · Miền Trung · Việt Nam',
-    filter:'trung', stars:'★★★★★', badge:'Di Sản', price:'1.800.000đ', priceNum:1800000, days:'3 ngày 2 đêm',
-    teaser:'400 năm lịch sử, đèn lồng ngũ sắc, ẩm thực đặc sắc miền Trung',
-    heroImg:P(429,1400,800), cardImg:P(429,700,900), bookImg:P(429,600,400),
-    gallery:[
-      {src:P(429,1200,600),title:'Phố đèn lồng về đêm',desc:'Ngàn đèn lồng thắp sáng những con phố cổ — linh hồn của Hội An'},
-      {src:P(342,1200,600),title:'Cầu Nhật Bản cổ kính',desc:'Cây cầu 400 năm tuổi — biểu tượng bất hủ của phố cổ Hội An'},
-      {src:P(449,1200,600),title:'Sông Hoài thơ mộng',desc:'Thả hoa đăng trên dòng sông Hoài lung linh ánh đèn về đêm'},
-      {src:P(336,1200,600),title:'Kiến trúc Á–Âu',desc:'Giao thoa văn hóa Nhật–Hoa–Việt trong từng chi tiết kiến trúc'},
-      {src:P(112,1200,600),title:'Ẩm thực đường phố',desc:'Cao lầu, bánh mì, Mì Quảng — thiên đường ẩm thực miền Trung'},
+
+  hoian: {
+    id: 'hoian',
+    name: 'Phố Cổ Hội An',
+    region: 'Quảng Nam · Miền Trung',
+    regionFull: 'Quảng Nam · Miền Trung · Việt Nam',
+    filter: 'trung',
+    stars: '★★★★★',
+    badge: 'Di Sản',
+    price: '1.800.000đ',
+    priceNum: 1800000,
+    days: '3 ngày 2 đêm',
+    teaser: '400 năm lịch sử, đèn lồng ngũ sắc, ẩm thực đặc sắc miền Trung',
+    heroImg: 'https://images.unsplash.com/photo-1559825481-17a6c6f10f3e?auto=format&fit=crop&q=80&w=1400',
+    cardImg: 'https://images.unsplash.com/photo-1559825481-17a6c6f10f3e?auto=format&fit=crop&q=80&w=700&h=900',
+    bookImg: 'https://images.unsplash.com/photo-1559825481-17a6c6f10f3e?auto=format&fit=crop&q=80&w=600',
+    gallery: [
+      {src: 'https://images.unsplash.com/photo-1559825481-17a6c6f10f3e?auto=format&fit=crop&q=80&w=1200', title: 'Phố đèn lồng về đêm', desc: 'Ngàn đèn lồng thắp sáng phố cổ'},
+      {src: 'https://images.pexels.com/photos/1486222/pexels-photo-1486222.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', title: 'Cầu Nhật Bản cổ kính', desc: 'Cầu 400 năm tuổi biểu tượng Hội An'},
+      {src: 'https://images.unsplash.com/photo-1563245372-f2176b2e0e3e?auto=format&fit=crop&q=80&w=1200', title: 'Sông Hoài thơ mộng', desc: 'Thả hoa đăng lung linh trên sông Hoài'},
+      {src: 'https://images.pexels.com/photos/2583852/pexels-photo-2583852.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', title: 'Kiến trúc Á–Âu', desc: 'Giao thoa văn hóa Nhật–Hoa–Việt'},
+      {src: 'https://images.unsplash.com/photo-1559825481-17a6c6f10f3e?auto=format&fit=crop&q=80&w=1200', title: 'Ẩm thực đường phố', desc: 'Cao lầu, bánh mì, Mì Quảng'}
     ],
-    activities:[
+    activities: [
       {icon:'🏮',name:'Đêm hội đèn lồng',desc:'Tham gia lễ hội đèn lồng rằm — cả phố cổ lấp lánh ánh đèn, thả hoa đăng trên sông Hoài.',dur:'Cả đêm'},
       {icon:'🛶',name:'Thuyền đèn sông Hoài',desc:'Ngồi thuyền gỗ cổ truyền, ngắm phố cổ lung linh phản chiếu dưới mặt sông trong đêm.',dur:'1.5 giờ'},
       {icon:'👘',name:'May áo dài & thử đồ',desc:'Đặt may áo dài tại xưởng thủ công, mặc trang phục truyền thống chụp ảnh khắp phố cổ.',dur:'Nửa ngày'},
       {icon:'🍳',name:'Lớp học nấu ăn',desc:'Học nấu cao lầu, bánh xèo, cơm gà Hội An từ đầu bếp bản địa trong nhà cổ truyền thống.',dur:'3 giờ'},
       {icon:'🎨',name:'Làng nghề thủ công',desc:'Tham quan làng mộc Kim Bồng, làng gốm Thanh Hà ngay bên dòng Thu Bồn xanh mát.',dur:'Nửa ngày'},
-      {icon:'🚴',name:'Đạp xe làng quê',desc:'Đạp xe qua đồng lúa xanh, làng rau Trà Quế — trải nghiệm cuộc sống thực của người Hội An.',dur:'3–4 giờ'},
+      {icon:'🚴',name:'Đạp xe làng quê',desc:'Đạp xe qua đồng lúa xanh, làng rau Trà Quế — trải nghiệm cuộc sống thực của người Hội An.',dur:'3–4 giờ'}
     ],
-    aboutHtml:'<h3>Thành Phố <em>400 Năm Lịch Sử</em></h3><p>Hội An từng là thương cảng quốc tế sầm uất nhất Đông Nam Á từ thế kỷ 15–19. Thương nhân Nhật Bản, Trung Hoa, Hà Lan và Bồ Đào Nha đã để lại dấu ấn kiến trúc đặc sắc — khiến Hội An trở thành sự giao thoa văn hóa độc nhất vô nhị ở Đông Nam Á.</p><p>Phố cổ vẫn giữ nguyên hơn 1.000 di tích kiến trúc cổ — từ nhà cổ, hội quán, đền chùa đến cầu Nhật Bản nổi tiếng. UNESCO công nhận Hội An là Di sản Văn hóa Thế giới năm 1999.</p>',
-    facts:[{l:'Thành lập',v:'Thế kỷ 15'},{l:'Di tích',v:'1.360 công trình'},{l:'UNESCO',v:'1999'},{l:'Mùa đẹp nhất',v:'Tháng 2 – 8'},{l:'Tọa độ',v:'15°52′B, 108°20′Đ'}]
+    aboutHtml: '<h3>Thành Phố <em>400 Năm Lịch Sử</em></h3><p>Hội An từng là thương cảng quốc tế sầm uất nhất Đông Nam Á từ thế kỷ 15–19. Thương nhân Nhật Bản, Trung Hoa, Hà Lan và Bồ Đào Nha đã để lại dấu ấn kiến trúc đặc sắc — khiến Hội An trở thành sự giao thoa văn hóa độc nhất vô nhị ở Đông Nam Á.</p><p>Phố cổ vẫn giữ nguyên hơn 1.000 di tích kiến trúc cổ — từ nhà cổ, hội quán, đền chùa đến cầu Nhật Bản nổi tiếng. UNESCO công nhận Hội An là Di sản Văn hóa Thế giới năm 1999.</p>',
+    facts: [
+      {l:'Thành lập',v:'Thế kỷ 15'},
+      {l:'Di tích',v:'1.360 công trình'},
+      {l:'UNESCO',v:'1999'},
+      {l:'Mùa đẹp nhất',v:'Tháng 2 – 8'},
+      {l:'Tọa độ',v:'15°52′B, 108°20′Đ'}
+    ]
   },
-  sapa:{
-    id:'sapa', name:'Sa Pa', region:'Lào Cai · Miền Bắc', regionFull:'Lào Cai · Miền Bắc · Việt Nam',
-    filter:'bac', stars:'★★★★☆', badge:'Trekking', price:'2.200.000đ', priceNum:2200000, days:'4 ngày 3 đêm',
-    teaser:'Ruộng bậc thang vàng óng, bản H\'Mông, đỉnh Fansipan 3.143m',
-    heroImg:P(167,1400,800), cardImg:P(167,700,900), bookImg:P(167,600,400),
-    gallery:[
-      {src:P(167,1200,600),title:'Ruộng bậc thang mùa vàng',desc:'Mùa lúa chín tháng 9–10, những thửa ruộng vàng óng trải dài vô tận'},
-      {src:P(227,1200,600),title:'Đỉnh Fansipan 3.143m',desc:'Nóc nhà Đông Dương — điểm chinh phục của mọi du khách Việt Nam'},
-      {src:P(117,1200,600),title:'Bản làng H\'Mông',desc:'Sắc màu thổ cẩm rực rỡ của đồng bào dân tộc thiểu số vùng cao'},
-      {src:P(247,1200,600),title:'Sa Pa trong mây',desc:'Thị trấn ẩn hiện trong làn mây trắng bảng lảng mỗi buổi sáng sớm'},
-      {src:P(287,1200,600),title:'Rừng núi Hoàng Liên Sơn',desc:'Rừng thông nguyên sinh bạt ngàn trên triền núi cao ngút tầm mắt'},
+
+  sapa: {
+    id: 'sapa',
+    name: 'Sa Pa',
+    region: 'Lào Cai · Miền Bắc',
+    regionFull: 'Lào Cai · Miền Bắc · Việt Nam',
+    filter: 'bac',
+    stars: '★★★★☆',
+    badge: 'Trekking',
+    price: '2.200.000đ',
+    priceNum: 2200000,
+    days: '4 ngày 3 đêm',
+    teaser: 'Ruộng bậc thang vàng óng, bản H\'Mông, đỉnh Fansipan 3.143m',
+    heroImg: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&q=80&w=1400',
+    cardImg: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&q=80&w=700&h=900',
+    bookImg: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&q=80&w=600',
+    gallery: [
+      {src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&q=80&w=1200', title: 'Ruộng bậc thang mùa vàng', desc: 'Mùa lúa chín tháng 9–10, những thửa ruộng vàng óng trải dài vô tận'},
+      {src: 'https://images.unsplash.com/photo-1559827291-72ee739b9c17?auto=format&fit=crop&q=80&w=1200', title: 'Đỉnh Fansipan 3.143m', desc: 'Nóc nhà Đông Dương — điểm chinh phục của mọi du khách Việt Nam'},
+      {src: 'https://images.pexels.com/photos/147411/italy-mountains-dawn-daybreak-147411.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', title: 'Bản làng H\'Mông', desc: 'Sắc màu thổ cẩm rực rỡ của đồng bào dân tộc thiểu số vùng cao'},
+      {src: 'https://images.unsplash.com/photo-1560303982-0a5e3290ff9a?auto=format&fit=crop&q=80&w=1200', title: 'Sa Pa trong mây', desc: 'Thị trấn ẩn hiện trong làn mây trắng bảng lảng mỗi buổi sáng sớm'},
+      {src: 'https://images.unsplash.com/photo-1559825481-17a6c6f10f3e?auto=format&fit=crop&q=80&w=1200', title: 'Rừng núi Hoàng Liên Sơn', desc: 'Rừng thông nguyên sinh bạt ngàn trên triền núi cao ngút tầm mắt'}
     ],
-    activities:[
+    activities: [
       {icon:'🏔️',name:'Leo Fansipan',desc:'Chinh phục đỉnh Fansipan 3.143m — nóc nhà Đông Dương bằng cáp treo hoặc trekking bộ 2–3 ngày.',dur:'1–3 ngày'},
       {icon:'🚶',name:'Trekking bản làng',desc:'Đi bộ qua các bản H\'Mông, Dao Đỏ, Tày — giao lưu văn hóa và ngắm ruộng bậc thang hùng vĩ.',dur:'Cả ngày'},
       {icon:'🛵',name:'Xe máy thung lũng',desc:'Phóng xe qua Thung lũng Mường Hoa, thung lũng Tả Van trong không khí trong lành mát rượi.',dur:'Nửa ngày'},
       {icon:'🎨',name:'Tìm hiểu thổ cẩm',desc:'Tham quan xưởng dệt, học thêu thổ cẩm truyền thống của người H\'Mông và Dao Đỏ.',dur:'2 giờ'},
       {icon:'🌃',name:'Chợ đêm Sa Pa',desc:'Khám phá chợ đêm với đặc sản vùng cao: thắng cố, thịt hun khói, rượu ngô Bắc Hà.',dur:'Buổi tối'},
-      {icon:'🛁',name:'Tắm thuốc người Dao',desc:'Ngâm mình trong bồn tắm thảo dược bí truyền của người Dao Đỏ — giải mỏi sau trekking.',dur:'1 giờ'},
+      {icon:'🛁',name:'Tắm thuốc người Dao',desc:'Ngâm mình trong bồn tắm thảo dược bí truyền của người Dao Đỏ — giải mỏi sau trekking.',dur:'1 giờ'}
     ],
-    aboutHtml:'<h3>Tây Bắc <em>Hùng Vĩ Trong Mây</em></h3><p>Sa Pa tọa lạc ở độ cao 1.600m trong dãy Hoàng Liên Sơn hùng vĩ, cách Hà Nội 380km. Người Pháp xây dựng nơi đây thành khu nghỉ dưỡng từ năm 1903, để lại những công trình biệt thự ẩn trong rừng thông.</p><p>Sa Pa nổi tiếng với những thửa ruộng bậc thang được National Geographic bình chọn là một trong những ruộng bậc thang đẹp nhất thế giới, cùng văn hóa đa dạng của 6 dân tộc thiểu số bản địa.',
-    facts:[{l:'Độ cao',v:'1.600m'},{l:'Đỉnh Fansipan',v:'3.143m'},{l:'Dân tộc',v:'6 dân tộc'},{l:'Mùa đẹp nhất',v:'Tháng 9 – 11'},{l:'Nhiệt độ TB',v:'15–18°C'}]
+    aboutHtml: '<h3>Tây Bắc <em>Hùng Vĩ Trong Mây</em></h3><p>Sa Pa tọa lạc ở độ cao 1.600m trong dãy Hoàng Liên Sơn hùng vĩ, cách Hà Nội 380km. Người Pháp xây dựng nơi đây thành khu nghỉ dưỡng từ năm 1903, để lại những công trình biệt thự ẩn trong rừng thông.</p><p>Sa Pa nổi tiếng với những thửa ruộng bậc thang được National Geographic bình chọn là một trong những ruộng bậc thang đẹp nhất thế giới, cùng văn hóa đa dạng của 6 dân tộc thiểu số bản địa.</p>',
+    facts: [
+      {l:'Độ cao',v:'1.600m'},
+      {l:'Đỉnh Fansipan',v:'3.143m'},
+      {l:'Dân tộc',v:'6 dân tộc'},
+      {l:'Mùa đẹp nhất',v:'Tháng 9 – 11'},
+      {l:'Nhiệt độ TB',v:'15–18°C'}
+    ]
   },
-  dalat:{
-    id:'dalat', name:'Đà Lạt', region:'Lâm Đồng · Tây Nguyên', regionFull:'Lâm Đồng · Tây Nguyên · Việt Nam',
-    filter:'nam', stars:'★★★★★', badge:'Lãng Mạn', price:'1.500.000đ', priceNum:1500000, days:'3 ngày 2 đêm',
-    teaser:'Thành phố ngàn hoa, khí hậu ôn hòa, kiến trúc Pháp cổ kính',
-    heroImg:P(257,1400,800), cardImg:P(257,700,900), bookImg:P(257,600,400),
-    gallery:[
-      {src:P(257,1200,600),title:'Thành phố hoa Đà Lạt',desc:'Triệu bông hoa đua nở quanh năm trong khí hậu ôn hòa 4 mùa'},
-      {src:P(176,1200,600),title:'Rừng thông vi vút',desc:'Rừng thông ngút ngàn bao phủ thành phố trong sương mù buổi sáng'},
-      {src:P(177,1200,600),title:'Hồ Xuân Hương',desc:'Hồ Xuân Hương — trái tim của Đà Lạt, nơi hẹn hò lý tưởng'},
-      {src:P(289,1200,600),title:'Vườn dâu tây',desc:'Tự tay hái dâu tây tươi mọng tại những vườn dâu nổi tiếng'},
-      {src:P(227,1200,600),title:'Thác nước hùng vĩ',desc:'Thác Pongour và thác Voi — dòng nước trắng xóa giữa rừng xanh'},
+
+  dalat: {
+    id: 'dalat',
+    name: 'Đà Lạt',
+    region: 'Lâm Đồng · Tây Nguyên',
+    regionFull: 'Lâm Đồng · Tây Nguyên · Việt Nam',
+    filter: 'nam',
+    stars: '★★★★★',
+    badge: 'Lãng Mạn',
+    price: '1.500.000đ',
+    priceNum: 1500000,
+    days: '3 ngày 2 đêm',
+    teaser: 'Thành phố ngàn hoa, khí hậu ôn hòa, kiến trúc Pháp cổ kính',
+    heroImg: 'https://images.unsplash.com/photo-1580130718646-9f694209b207?auto=format&fit=crop&q=80&w=1400',
+    cardImg: 'https://images.unsplash.com/photo-1580130718646-9f694209b207?auto=format&fit=crop&q=80&w=700&h=900',
+    bookImg: 'https://images.unsplash.com/photo-1580130718646-9f694209b207?auto=format&fit=crop&q=80&w=600',
+    gallery: [
+      {src: 'https://images.unsplash.com/photo-1580130718646-9f694209b207?auto=format&fit=crop&q=80&w=1200', title: 'Thành phố hoa Đà Lạt', desc: 'Triệu bông hoa đua nở quanh năm'},
+      {src: 'https://images.pexels.com/photos/547116/pexels-photo-547116.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', title: 'Vườn dâu tây', desc: 'Tự tay hái dâu tây tươi mọng'},
+      {src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&q=80&w=1200', title: 'Rừng thông vi vút', desc: 'Rừng thông ngút ngàn trong sương mù'},
+      {src: 'https://images.unsplash.com/photo-1563245372-f2176b2e0e3e?auto=format&fit=crop&q=80&w=1200', title: 'Hồ Xuân Hương', desc: 'Trái tim thơ mộng của Đà Lạt'},
+      {src: 'https://images.pexels.com/photos/2583852/pexels-photo-2583852.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', title: 'Thác nước hùng vĩ', desc: 'Thác Pongour và thác Voi giữa rừng xanh'}
     ],
-    activities:[
+    activities: [
       {icon:'🌸',name:'Tour vườn hoa & dâu tây',desc:'Tham quan vườn hoa thành phố, tự tay hái dâu tây, atiso tươi tại những vườn nổi tiếng.',dur:'Nửa ngày'},
       {icon:'🚂',name:'Tàu hỏa răng cưa',desc:'Trải nghiệm tuyến tàu cổ từ ga Đà Lạt xuống Trại Mát qua rừng thông thơ mộng.',dur:'2 giờ'},
       {icon:'🏇',name:'Cưỡi ngựa rừng thông',desc:'Cưỡi ngựa dạo quanh những cánh rừng thông xanh mát, hít thở không khí trong lành.',dur:'1–2 giờ'},
       {icon:'🧘',name:'Thiền định thác nước',desc:'Thiền định bên dòng thác Pongour hùng vĩ, tìm lại sự bình yên trong tâm hồn.',dur:'Nửa ngày'},
       {icon:'☕',name:'Cà phê sáng sương mù',desc:'Nhâm nhi cà phê sữa nóng trong sương mù buổi sáng, ngắm thành phố từ từ thức giấc.',dur:'1–2 giờ'},
-      {icon:'🛍️',name:'Chợ đêm Đà Lạt',desc:'Dạo chợ đêm, thưởng thức bánh tráng nướng, bắp nướng và sà cừ ướp lạnh đặc trưng.',dur:'Buổi tối'},
+      {icon:'🛍️',name:'Chợ đêm Đà Lạt',desc:'Dạo chợ đêm, thưởng thức bánh tráng nướng, bắp nướng và sà cừ ướp lạnh đặc trưng.',dur:'Buổi tối'}
     ],
-    aboutHtml:'<h3>Thành Phố <em>Ngàn Hoa Mộng Mơ</em></h3><p>Đà Lạt được bác sĩ người Pháp Alexandre Yersin phát hiện năm 1893. Thành phố nằm ở độ cao 1.500m, sở hữu khí hậu ôn hòa mát mẻ quanh năm — nhiệt độ trung bình chỉ 18–22°C, hiếm có ở vùng nhiệt đới Việt Nam.</p><p>Với hơn 1.000 biệt thự Pháp cổ điển, rừng thông bạt ngàn, vườn hoa rực rỡ và những thác nước hùng vĩ, Đà Lạt được mệnh danh là "Paris của phương Đông" — điểm đến lãng mạn bậc nhất Việt Nam.',
-    facts:[{l:'Độ cao',v:'1.500m'},{l:'Nhiệt độ TB',v:'18–22°C'},{l:'Diện tích',v:'394 km²'},{l:'Mùa đẹp nhất',v:'Tháng 12 – 3'},{l:'Biệt thự Pháp',v:'1.000+ công trình'}]
+    aboutHtml: '<h3>Thành Phố <em>Ngàn Hoa Mộng Mơ</em></h3><p>Đà Lạt được bác sĩ người Pháp Alexandre Yersin phát hiện năm 1893. Thành phố nằm ở độ cao 1.500m, sở hữu khí hậu ôn hòa mát mẻ quanh năm — nhiệt độ trung bình chỉ 18–22°C, hiếm có ở vùng nhiệt đới Việt Nam.</p><p>Với hơn 1.000 biệt thự Pháp cổ điển, rừng thông bạt ngàn, vườn hoa rực rỡ và những thác nước hùng vĩ, Đà Lạt được mệnh danh là "Paris của phương Đông" — điểm đến lãng mạn bậc nhất Việt Nam.</p>',
+    facts: [
+      {l:'Độ cao',v:'1.500m'},
+      {l:'Nhiệt độ TB',v:'18–22°C'},
+      {l:'Diện tích',v:'394 km²'},
+      {l:'Mùa đẹp nhất',v:'Tháng 12 – 3'},
+      {l:'Biệt thự Pháp',v:'1.000+ công trình'}
+    ]
   },
-  phuquoc:{
-    id:'phuquoc', name:'Phú Quốc', region:'Kiên Giang · Miền Nam', regionFull:'Kiên Giang · Miền Nam · Việt Nam',
-    filter:'nam bien', stars:'★★★★★', badge:'Thiên Đường', price:'3.500.000đ', priceNum:3500000, days:'4 ngày 3 đêm',
-    teaser:'Bãi cát trắng mịn, nước biển ngọc bích, san hô đa sắc',
-    heroImg:P(40,1400,800), cardImg:P(40,700,900), bookImg:P(40,600,400),
-    gallery:[
-      {src:P(40,1200,600),title:'Bãi biển cát trắng tinh',desc:'Bãi cát trắng mịn như bột, nước biển trong vắt ngọc bích'},
-      {src:P(180,1200,600),title:'Lặn ngắm san hô',desc:'Hệ sinh thái san hô đa dạng bậc nhất Việt Nam'},
-      {src:P(53,1200,600),title:'Hoàng hôn Bãi Dài',desc:'Hoàng hôn Phú Quốc — khoảnh khắc đẹp không thể bỏ lỡ'},
-      {src:P(102,1200,600),title:'Hải sản tươi sống',desc:'Tôm hùm, ghẹ, hàu tươi ngon trực tiếp từ lòng biển'},
-      {src:P(172,1200,600),title:'Khám phá đảo hoang',desc:'4 đảo hoang bí ẩn chỉ cách đảo chính vài chục phút tàu'},
+
+  phuquoc: {
+    id: 'phuquoc',
+    name: 'Phú Quốc',
+    region: 'Kiên Giang · Miền Nam',
+    regionFull: 'Kiên Giang · Miền Nam · Việt Nam',
+    filter: 'nam bien',
+    stars: '★★★★★',
+    badge: 'Thiên Đường',
+    price: '3.500.000đ',
+    priceNum: 3500000,
+    days: '4 ngày 3 đêm',
+    teaser: 'Bãi cát trắng mịn, nước biển ngọc bích, san hô đa sắc',
+    heroImg: 'https://images.unsplash.com/photo-1559827291-72ee739b9c17?auto=format&fit=crop&q=80&w=1400',
+    cardImg: 'https://images.unsplash.com/photo-1559827291-72ee739b9c17?auto=format&fit=crop&q=80&w=700&h=900',
+    bookImg: 'https://images.unsplash.com/photo-1559827291-72ee739b9c17?auto=format&fit=crop&q=80&w=600',
+    gallery: [
+      {src: 'https://images.unsplash.com/photo-1559827291-72ee739b9c17?auto=format&fit=crop&q=80&w=1200', title: 'Bãi biển cát trắng tinh', desc: 'Bãi Sao và Bãi Dài nổi tiếng với cát trắng mịn'},
+      {src: 'https://images.pexels.com/photos/2583852/pexels-photo-2583852.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', title: 'Lặn ngắm san hô', desc: 'Hệ sinh thái san hô đa dạng bậc nhất Việt Nam'},
+      {src: 'https://images.unsplash.com/photo-1560303982-0a5e3290ff9a?auto=format&fit=crop&q=80&w=1200', title: 'Hoàng hôn Bãi Dài', desc: 'Hoàng hôn tuyệt đẹp trên biển Phú Quốc'},
+      {src: 'https://images.unsplash.com/photo-1559825481-17a6c6f10f3e?auto=format&fit=crop&q=80&w=1200', title: 'Hải sản tươi sống', desc: 'Tôm hùm, ghẹ, hàu tươi ngon trực tiếp từ biển'},
+      {src: 'https://images.pexels.com/photos/147411/italy-mountains-dawn-daybreak-147411.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', title: 'Khám phá đảo hoang', desc: '4 đảo hoang bí ẩn chỉ cách đảo chính vài chục phút tàu'}
     ],
-    activities:[
+    activities: [
       {icon:'🤿',name:'Lặn ngắm san hô',desc:'Khám phá thế giới san hô đầy màu sắc với hướng dẫn viên chuyên nghiệp tại các bãi lặn đẹp nhất.',dur:'Nửa ngày'},
       {icon:'⛵',name:'Tour 4 đảo hoang',desc:'Xuất phát sáng sớm, khám phá 4 đảo hoang — bơi lội, câu cá, BBQ hải sản ngay trên bờ biển.',dur:'Cả ngày'},
       {icon:'🚴',name:'Xe đạp khám phá đảo',desc:'Đạp xe qua làng chài, rừng quốc gia và những bãi biển ít người biết đến.',dur:'Nửa ngày'},
       {icon:'🦞',name:'Ẩm thực Dinh Cậu',desc:'Thưởng thức hải sản tươi sống tại chợ đêm Dinh Cậu nổi tiếng khi hoàng hôn buông xuống.',dur:'Buổi tối'},
       {icon:'🌅',name:'Câu cá thuyền thúng',desc:'Ra biển câu cá trên thuyền thúng truyền thống của ngư dân địa phương, tự nấu cá vừa câu.',dur:'Buổi sáng'},
-      {icon:'🧖',name:'Spa & thư giãn',desc:'Thưởng thức spa trị liệu với tinh dầu tràm Phú Quốc và muối hồng tại resort cao cấp.',dur:'2–3 giờ'},
+      {icon:'🧖',name:'Spa & thư giãn',desc:'Thưởng thức spa trị liệu với tinh dầu tràm Phú Quốc và muối hồng tại resort cao cấp.',dur:'2–3 giờ'}
     ],
-    aboutHtml:'<h3>Đảo Ngọc <em>Của Thiên Nhiên</em></h3><p>Phú Quốc là hòn đảo lớn nhất Việt Nam với diện tích 589km², nằm trong vịnh Thái Lan. Nơi đây được bao quanh bởi 99 hòn đảo lớn nhỏ tạo thành quần đảo An Thới và Bắc Đảo hùng vĩ.</p><p>Rừng quốc gia Phú Quốc chiếm hơn 50% diện tích đảo. Phú Quốc nổi tiếng với nước mắm trứ danh và tiêu Phú Quốc — hai đặc sản được xuất khẩu toàn cầu và là niềm tự hào của người dân đảo ngọc.',
-    facts:[{l:'Diện tích',v:'589 km²'},{l:'Số đảo',v:'99 hòn'},{l:'Rừng quốc gia',v:'50% diện tích'},{l:'Mùa đẹp nhất',v:'Tháng 11 – 4'},{l:'Đặc sản',v:'Nước mắm & Tiêu'}]
+    aboutHtml: '<h3>Đảo Ngọc <em>Của Thiên Nhiên</em></h3><p>Phú Quốc là hòn đảo lớn nhất Việt Nam với diện tích 589km², nằm trong vịnh Thái Lan. Nơi đây được bao quanh bởi 99 hòn đảo lớn nhỏ tạo thành quần đảo An Thới và Bắc Đảo hùng vĩ.</p><p>Rừng quốc gia Phú Quốc chiếm hơn 50% diện tích đảo. Phú Quốc nổi tiếng với nước mắm trứ danh và tiêu Phú Quốc — hai đặc sản được xuất khẩu toàn cầu và là niềm tự hào của người dân đảo ngọc.</p>',
+    facts: [
+      {l:'Diện tích',v:'589 km²'},
+      {l:'Số đảo',v:'99 hòn'},
+      {l:'Rừng quốc gia',v:'50% diện tích'},
+      {l:'Mùa đẹp nhất',v:'Tháng 11 – 4'},
+      {l:'Đặc sản',v:'Nước mắm & Tiêu'}
+    ]
   },
-  danang:{
-    id:'danang', name:'Đà Nẵng', region:'Đà Nẵng · Miền Trung', regionFull:'Đà Nẵng · Miền Trung · Việt Nam',
-    filter:'trung bien', stars:'★★★★☆', badge:'Thành Phố', price:'2.000.000đ', priceNum:2000000, days:'3 ngày 2 đêm',
-    teaser:'Cầu Rồng phun lửa, Bà Nà Hills, bãi biển Mỹ Khê xanh ngắt',
-    heroImg:P(137,1400,800), cardImg:P(137,700,900), bookImg:P(137,600,400),
-    gallery:[
-      {src:P(137,1200,600),title:'Cầu Rồng về đêm',desc:'Cầu Rồng 666m phun lửa và phun nước mỗi tối cuối tuần'},
-      {src:P(218,1200,600),title:'Bà Nà Hills Cầu Vàng',desc:'Cầu Vàng đôi bàn tay khổng lồ nổi tiếng thế giới'},
-      {src:P(55,1200,600),title:'Bãi biển Mỹ Khê',desc:'Top 6 bãi biển quyến rũ nhất hành tinh theo Forbes'},
-      {src:P(162,1200,600),title:'Ngũ Hành Sơn',desc:'5 ngọn núi đá cẩm thạch huyền thoại và chùa chiền cổ kính'},
-      {src:P(307,1200,600),title:'Đà Nẵng về đêm',desc:'Thành phố lung linh ánh đèn phản chiếu trên dòng sông Hàn'},
+
+  danang: {
+    id: 'danang',
+    name: 'Đà Nẵng',
+    region: 'Đà Nẵng · Miền Trung',
+    regionFull: 'Đà Nẵng · Miền Trung · Việt Nam',
+    filter: 'trung bien',
+    stars: '★★★★☆',
+    badge: 'Thành Phố',
+    price: '2.000.000đ',
+    priceNum: 2000000,
+    days: '3 ngày 2 đêm',
+    teaser: 'Cầu Rồng phun lửa, Bà Nà Hills, bãi biển Mỹ Khê xanh ngắt',
+    heroImg: 'https://images.unsplash.com/photo-1563245372-f2176b2e0e3e?auto=format&fit=crop&q=80&w=1400',
+    cardImg: 'https://images.unsplash.com/photo-1563245372-f2176b2e0e3e?auto=format&fit=crop&q=80&w=700&h=900',
+    bookImg: 'https://images.unsplash.com/photo-1563245372-f2176b2e0e3e?auto=format&fit=crop&q=80&w=600',
+    gallery: [
+      {src: 'https://images.unsplash.com/photo-1563245372-f2176b2e0e3e?auto=format&fit=crop&q=80&w=1200', title: 'Cầu Vàng Bà Nà Hills', desc: 'Bàn tay khổng lồ nổi tiếng thế giới'},
+      {src: 'https://images.unsplash.com/photo-1559827291-72ee739b9c17?auto=format&fit=crop&q=80&w=1200', title: 'Bãi biển Mỹ Khê', desc: 'Top 6 bãi biển quyến rũ nhất hành tinh'},
+      {src: 'https://images.pexels.com/photos/2583852/pexels-photo-2583852.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', title: 'Cầu Rồng về đêm', desc: 'Cầu Rồng 666m phun lửa và phun nước'},
+      {src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&q=80&w=1200', title: 'Ngũ Hành Sơn', desc: '5 ngọn núi đá cẩm thạch linh thiêng'},
+      {src: 'https://images.unsplash.com/photo-1559825481-17a6c6f10f3e?auto=format&fit=crop&q=80&w=1200', title: 'Đà Nẵng về đêm', desc: 'Thành phố lung linh ánh đèn sông Hàn'}
     ],
-    activities:[
+    activities: [
       {icon:'🐉',name:'Cầu Rồng phun lửa',desc:'Chứng kiến Cầu Rồng 666m phun lửa và phun nước ngoạn mục lúc 9h tối thứ 7 và Chủ nhật.',dur:'Buổi tối'},
       {icon:'🎢',name:'Bà Nà Hills – Cầu Vàng',desc:'Cáp treo kỷ lục thế giới, dạo bước trên Cầu Vàng đôi bàn tay khổng lồ trên đám mây.',dur:'Cả ngày'},
       {icon:'🏄',name:'Lướt sóng Mỹ Khê',desc:'Học lướt sóng với huấn luyện viên chuyên nghiệp trên bãi biển Mỹ Khê sóng hoàn hảo.',dur:'2–3 giờ'},
       {icon:'🕌',name:'Ngũ Hành Sơn',desc:'Khám phá 5 ngọn núi đá cẩm thạch linh thiêng với hàng chục chùa chiền và hang động.',dur:'Nửa ngày'},
       {icon:'🎭',name:'Phố ẩm thực Đà Nẵng',desc:'Thưởng thức bún chả cá, bánh tráng cuốn thịt heo, mì Quảng đặc sản xứ Quảng.',dur:'Buổi tối'},
-      {icon:'🚤',name:'Kayak sông Hàn',desc:'Chèo kayak ngắm cầu Rồng, cầu Tình Yêu và cầu Thuận Phước từ mặt nước.',dur:'1.5 giờ'},
+      {icon:'🚤',name:'Kayak sông Hàn',desc:'Chèo kayak ngắm cầu Rồng, cầu Tình Yêu và cầu Thuận Phước từ mặt nước.',dur:'1.5 giờ'}
     ],
-    aboutHtml:'<h3>Thành Phố <em>Đáng Sống Nhất</em></h3><p>Đà Nẵng là thành phố trực thuộc Trung ương lớn thứ 4 Việt Nam, điểm giao thoa giữa Di sản Hội An và Cố đô Huế. Từ một thành phố cảng bình thường, Đà Nẵng đã vươn lên thành đô thị hiện đại, năng động và sạch đẹp bậc nhất.</p><p>Được vinh danh "Thành phố đáng sống nhất Việt Nam" nhiều năm liên tiếp nhờ sự kết hợp độc đáo giữa biển xanh, núi hùng, di sản văn hóa và tiện nghi đô thị hiện đại.',
-    facts:[{l:'Dân số',v:'1.2 triệu'},{l:'Bờ biển',v:'92km'},{l:'Số cầu',v:'8 cây cầu'},{l:'Mùa đẹp nhất',v:'Tháng 3 – 8'},{l:'Tọa độ',v:'16°4′B, 108°13′Đ'}]
+    aboutHtml: '<h3>Thành Phố <em>Đáng Sống Nhất</em></h3><p>Đà Nẵng là thành phố trực thuộc Trung ương lớn thứ 4 Việt Nam, điểm giao thoa giữa Di sản Hội An và Cố đô Huế. Từ một thành phố cảng bình thường, Đà Nẵng đã vươn lên thành đô thị hiện đại, năng động và sạch đẹp bậc nhất.</p><p>Được vinh danh "Thành phố đáng sống nhất Việt Nam" nhiều năm liên tiếp nhờ sự kết hợp độc đáo giữa biển xanh, núi hùng, di sản văn hóa và tiện nghi đô thị hiện đại.</p>',
+    facts: [
+      {l:'Dân số',v:'1.2 triệu'},
+      {l:'Bờ biển',v:'92km'},
+      {l:'Số cầu',v:'8 cây cầu'},
+      {l:'Mùa đẹp nhất',v:'Tháng 3 – 8'},
+      {l:'Tọa độ',v:'16°4′B, 108°13′Đ'}
+    ]
   }
 };
 
